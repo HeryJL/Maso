@@ -1,29 +1,41 @@
 {
   "expo": {
-    "name": "maso-app",
+    "name": "MASO",
     "slug": "maso-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#05130B"
     },
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.maso.app"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#05130B"
       },
-      "edgeToEdgeEnabled": true
+      "package": "com.maso.app"
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "MASO a besoin de votre position pour les alertes de proximité."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "MASO a besoin d'accéder à vos photos pour les signalements."
+        }
+      ]
+    ]
   }
 }
